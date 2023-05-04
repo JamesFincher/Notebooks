@@ -1,0 +1,408 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9086ecec",
+   "metadata": {},
+   "source": [
+    "<h1>Code Examples using uuid module in Python</h1>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aba75291",
+   "metadata": {},
+   "source": [
+    "<h2>Example 1: Create a UUID using the `uuid.uuid1()` function</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "62548a3e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid1()\n",
+    "print(f\"Generated UUID (UUID1): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d7babbe7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid1()\n",
+    "print(f\"Generated UUID (UUID1): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "63ea800d",
+   "metadata": {},
+   "source": [
+    "<h2>Example 2: Create a UUID using the `uuid.uuid3()` function</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "09a87e53",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "namespace = uuid.NAMESPACE_DNS\n",
+    "name = \"example.com\"\n",
+    "generated_uuid = uuid.uuid3(namespace, name)\n",
+    "print(f\"Generated UUID (UUID3): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "edb01f96",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "namespace = uuid.NAMESPACE_DNS\n",
+    "name = \"example.com\"\n",
+    "generated_uuid = uuid.uuid3(namespace, name)\n",
+    "print(f\"Generated UUID (UUID3): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "87537ec8",
+   "metadata": {},
+   "source": [
+    "<h2>Example 3: Create a UUID using the `uuid.uuid4()` function</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71f1bb87",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "print(f\"Generated UUID (UUID4): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "60f8409d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "print(f\"Generated UUID (UUID4): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "40bee707",
+   "metadata": {},
+   "source": [
+    "<h2>Example 4: Create a UUID using the `uuid.uuid5()` function</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5ae813d4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "namespace = uuid.NAMESPACE_DNS\n",
+    "name = \"example.com\"\n",
+    "generated_uuid = uuid.uuid5(namespace, name)\n",
+    "print(f\"Generated UUID (UUID5): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2faeb489",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "namespace = uuid.NAMESPACE_DNS\n",
+    "name = \"example.com\"\n",
+    "generated_uuid = uuid.uuid5(namespace, name)\n",
+    "print(f\"Generated UUID (UUID5): {generated_uuid}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "53ca0c3f",
+   "metadata": {},
+   "source": [
+    "<h2>Example 5: Check if a string is a valid UUID</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b1a3f380",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "def is_valid_uuid(string):\n",
+    "    try:\n",
+    "        uuid.UUID(string)\n",
+    "        return True\n",
+    "    except ValueError:\n",
+    "        return False\n",
+    "\n",
+    "test_uuid = \"e0b9522d-ff44-4e42-81b7-93257a519e78\"\n",
+    "\n",
+    "print(f\"Is '{test_uuid}' a valid UUID? {is_valid_uuid(test_uuid)}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "818028ba",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "def is_valid_uuid(string):\n",
+    "    try:\n",
+    "        uuid.UUID(string)\n",
+    "        return True\n",
+    "    except ValueError:\n",
+    "        return False\n",
+    "\n",
+    "test_uuid = \"e0b9522d-ff44-4e42-81b7-93257a519e78\"\n",
+    "\n",
+    "print(f\"Is '{test_uuid}' a valid UUID? {is_valid_uuid(test_uuid)}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "032f3298",
+   "metadata": {},
+   "source": [
+    "<h2>Example 6: Get the namespace UUID for URL, DNS, and OID</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5d69cfca",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "print(f\"Namespace UUID for URL: {uuid.NAMESPACE_URL}\")\n",
+    "print(f\"Namespace UUID for DNS: {uuid.NAMESPACE_DNS}\")\n",
+    "print(f\"Namespace UUID for OID: {uuid.NAMESPACE_OID}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "136f6f9b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "print(f\"Namespace UUID for URL: {uuid.NAMESPACE_URL}\")\n",
+    "print(f\"Namespace UUID for DNS: {uuid.NAMESPACE_DNS}\")\n",
+    "print(f\"Namespace UUID for OID: {uuid.NAMESPACE_OID}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b471910b",
+   "metadata": {},
+   "source": [
+    "<h2>Example 7: Convert a UUID to a string</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "28da41e4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "uuid_string = str(generated_uuid)\n",
+    "print(f\"UUID as a string: {uuid_string}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "51295046",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "uuid_string = str(generated_uuid)\n",
+    "print(f\"UUID as a string: {uuid_string}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "19f70c7b",
+   "metadata": {},
+   "source": [
+    "<h2>Example 8: Create a UUID object from a string</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3b32761c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "uuid_string = \"e0b9522d-ff44-4e42-81b7-93257a519e78\"\n",
+    "uuid_object = uuid.UUID(uuid_string)\n",
+    "print(f\"UUID object from the string: {uuid_object}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9d090d2f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "uuid_string = \"e0b9522d-ff44-4e42-81b7-93257a519e78\"\n",
+    "uuid_object = uuid.UUID(uuid_string)\n",
+    "print(f\"UUID object from the string: {uuid_object}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b0371f79",
+   "metadata": {},
+   "source": [
+    "<h2>Example 9: Get the variant and version info of a UUID</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "87142cf5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "print(f\"Generated UUID: {generated_uuid}\")\n",
+    "print(f\"UUID variant: {generated_uuid.variant}\")\n",
+    "print(f\"UUID version: {generated_uuid.version}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bed1a6f1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "generated_uuid = uuid.uuid4()\n",
+    "print(f\"Generated UUID: {generated_uuid}\")\n",
+    "print(f\"UUID variant: {generated_uuid.variant}\")\n",
+    "print(f\"UUID version: {generated_uuid.version}\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0138eeca",
+   "metadata": {},
+   "source": [
+    "<h2>Example 10: Compare two UUIDs</h2>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8ed45fdd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "uuid1 = uuid.uuid4()\n",
+    "uuid2 = uuid.uuid4()\n",
+    "\n",
+    "print(f\"UUID1: {uuid1}\")\n",
+    "print(f\"UUID2: {uuid2}\")\n",
+    "print(f\"Is UUID1 equal to UUID2? {uuid1 == uuid2}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bb78aa97",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import uuid\n",
+    "\n",
+    "uuid1 = uuid.uuid4()\n",
+    "uuid2 = uuid.uuid4()\n",
+    "\n",
+    "print(f\"UUID1: {uuid1}\")\n",
+    "print(f\"UUID2: {uuid2}\")\n",
+    "print(f\"Is UUID1 equal to UUID2? {uuid1 == uuid2}\")\n"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
